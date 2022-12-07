@@ -6,8 +6,27 @@ import Actors from "./Actors";
 import Directors from "./Directors";
 import Movies from "./Movies";
 
-function App() {
-  return <div>{/*{code here}*/}</div>;
+const App=()=> {
+  return (
+    <div>
+      <NavBar />
+      <Switch>
+    <Route path="/movies">
+      <Movies />
+    </Route>
+    <Route path="/Directors">
+      <Directors />
+    </Route>
+     <Route path="/Actors">
+      <Actors />
+     </Route>
+     <Route path="/">
+     <Home />
+     </Route>
+     </Switch>
+    </div>
+
+  )
 }
 
 export default App;
